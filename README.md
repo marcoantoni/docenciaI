@@ -10,7 +10,7 @@ Dentro do método principal, crie um objeto chamado dataAniversario da classe Da
 
 Compile e execute esse código
 
-```shell
+```bash
  javac AppData.java
  java AppData
 ```
