@@ -1,11 +1,12 @@
 # Prática de POO
-Para começar, baixe o arquivo [Data.java](http://gpu.rocks/playground)
-
-Acrescente os atributos mes e ano do tipo int seguindo a estrutura da classe
+Para começar, baixe o arquivo [Data.java](http://gpu.rocks/playground) que contém uma estrutura minimalista de uma classe para representar uma data qualquer em orientação a objetos
 
 # Crie um novo arquivo chamado AppData.java
-Este arquivo deve ter a estrutura padrão de uma aplicação Java e deve conter o método ```java
- public static void main(String args[])
+Este arquivo deve ter a estrutura padrão de uma aplicação Java e deve conter o método 
+```java
+ public static void main(String args[]){
+     // código a ser desenvolvido
+ }
 ```
 
 Dentro do método principal, crie um objeto chamado dataAniversario da classe Data passando como parâmetro 3 inteiros que represtam respectivamente o dia, mes e ano de uma determinada data.
@@ -17,7 +18,9 @@ Compile e execute esse código
  java AppData
 ```
 
-Irá ocorrer um erro de compilação pois o método construtor não está ajustado para receber todos os parâmetros passados na criação do objeto. Ajuste o método construtor para receber os parâmetros mes e ano do tipo inteiro e inicialize os atributos da classe.
+Irá ocorrer um erro de compilação pois o método construtor não está ajustado para receber todos os parâmetros passados na criação do objeto. Acrescente os atributos mes e ano do tipo int seguindo a estrutura existente na classe Data e ajuste o método construtor para receber os parâmetros mes e ano do tipo inteiro e inicialize os atributos da classe.
+
+Recompile e execute novamente o arquivo AppData.java
 ## Browser
 ```java
     public static void main(String[] args){
