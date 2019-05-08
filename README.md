@@ -4,7 +4,9 @@ Para começar, baixe o arquivo [Data.java](http://gpu.rocks/playground)
 Acrescente os atributos mes e ano do tipo int seguindo a estrutura da classe
 
 # Crie um novo arquivo chamado AppData.java
-Este arquivo deve ter a estrutura padrão de uma aplicação Java e deve conter o método ```java public static void main(String args[])```
+Este arquivo deve ter a estrutura padrão de uma aplicação Java e deve conter o método ```java
+ public static void main(String args[])
+```
 
 Dentro do método principal, crie um objeto chamado dataAniversario da classe Data passando como parâmetro 3 inteiros que represtam respectivamente o dia, mes e ano de uma determinada data.
 
@@ -14,6 +16,8 @@ Compile e execute esse código
  javac AppData.java
  java AppData
 ```
+
+Irá ocorrer um erro de compilação pois o método construtor não está ajustado para receber todos os parâmetros passados na criação do objeto. Ajuste o método construtor para receber os parâmetros mes e ano do tipo inteiro e inicialize os atributos da classe.
 ## Browser
 ```java
     public static void main(String[] args){
