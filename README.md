@@ -29,7 +29,7 @@ Recompile e execute novamente o arquivo AppData e veja que a saída será os val
 ```java
 dataNascimento.dia = 40;
 ```
-6. Isso mudou o valor do atributo permitindo inserir um valor inválido para uma data. Vamos encapsular os atributos para impedir que eles sejam acessados diretamente. Para isso acrecente a palavra reservada `private` antes do tipo do dado no arquivo `Data.java`. Recompile o código e veja os erros de saída `AppData.java:X: error: dia has private access in Data`. Isto indica que não podemos mais acessar diretamento o atributo pois ele foi encapsulado.
+6. Isso mudou o valor do atributo permitindo inserir um valor inválido para uma data. Vamos **encapsular** os atributos para impedir que eles sejam acessados diretamente. Para isso acrecente a palavra reservada `private` antes do tipo do dado nos atributos da classe `Data.java`. Recompile o código e veja os erros de saída `AppData.java:X: error: dia has private access in Data`. Isto indica que não podemos mais acessar diretamento o atributo pois ele foi encapsulado.
 
 7. Agora vamos criar um método chamado `setData` responsável validar e  atribuir os valores a data. Sempre utilizamos o método `set` para alterar o valor de qualquer atributo que esteja encapsulado.
 ```java
@@ -66,7 +66,7 @@ public String getData(){
 }
 ```
 
-9. Chame os métodos `setData` e `getData` dentro do método principal de AppData
+9. Remova as linhas onde ocorre o acesso direto aos atributos. Chame os métodos `setData` e `getData` dentro do método principal de AppData
 ```java
 dataNascimento.setData(2, 6, 2019);
 
@@ -78,8 +78,9 @@ System.out.println( dataNascimento.getData() );
 
 
 ## Parte II - Implementação de uma classe
-Implemente uma classe chamada Pessoa contendo os atributos `nome, cpf, sexo e dataNascimento`. O atributo dataNascimento deve ser do tipo `Data` (classe utilizada anteriormente).
+1. Implemente uma classe chamada Pessoa contendo os atributos `nome, cpf, sexo e dataNascimento`. O atributo dataNascimento deve ser do tipo `Data` (classe utilizada anteriormente).
 
-Codifique o método construtor para que ele inicialize todos os atributos da classe e também crie os métodos `get` e `set` para cada atributo da classe. 
+2. Codifique o método construtor para que ele inicialize todos os atributos da classe e também crie os métodos `get` e `set` para cada atributo da classe. 
 
+3. Codifique um método chamado apresentarPessoa() que escreve na tela todos os atributos da classe. Para exibir a data de nascimento, use o método `getData()` da classe Data.
  
