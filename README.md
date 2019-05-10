@@ -68,7 +68,7 @@ public String getData(){
 }
 ```
 
-9. Remova as linhas onde ocorre o acesso direto aos atributos. Chame os métodos `setData` e `getData` dentro do método principal de AppData
+9. Chame os métodos `setData` e `getData` dentro do método principal de AppData
 ```java
 dataNascimento.setData(2, 6, 2019);
 
