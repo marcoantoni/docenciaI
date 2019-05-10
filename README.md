@@ -2,9 +2,9 @@
 A prática tem por objetivo exercitar a programação orientada a objetos fixando os conteúdo de Abstração e Encapsulamento permitindo domínio da linguagem de programação.
 
 ## parte I
-1. Para começar, baixe a classe [Data.java](http://gpu.rocks/playground) que contém uma estrutura minimalista de uma classe para representar uma data qualquer em orientação a objetos.
+1. Para começar, baixe a classe [Data.java](https://github.com/marcoantoni/docenciaI/blob/master/Data.java) que contém uma estrutura minimalista de uma classe para representar uma data qualquer em orientação a objetos.
 
-2. Crie um novo arquivo chamado AppData.java dentro da pasta onde o arquivo anterior foi baixado. Este arquivo deve ter a estrutura padrão de uma aplicação Java e deve conter o método `public static void main(String args[])`.
+2. Crie um novo arquivo chamado AppData.java dentro da pasta onde o arquivo anterior foi baixado. Este arquivo deve conter o método `public static void main(String args[])`.
 
 3. Dentro do método principal, crie um objeto chamado dataNascimento da classe Data passando como parâmetro 3 inteiros que represtam respectivamente o dia, mes e ano de uma determinada data.
 
@@ -37,28 +37,27 @@ Comente as linhas onde é feito o acesso direto aos atributos.
 7. Agora vamos criar um método chamado `setData` responsável validar e  atribuir os valores a data. Sempre utilizamos o método `set` para alterar o valor de qualquer atributo que esteja encapsulado.
 ```java
 public void setData(int dia, int mes, int ano){
-    int diasmes[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	int diasmes[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	if (mes > 0 && mes < 13){
+		this.mes = mes;
+		// validando o dia de acordo com o mes
+		if (dia > 0 && dia <= diasmes[mes+1]){
+			this.dia = dia;
+		} else {
+			System.out.println("Dia inválido");
+			this.dia = 1;
+		} 
+	} else {
+		System.out.println("Mês inválido");
+		this.mes = 1;
+	}
 
-    if (mes > 0 && mes < 13){
-       this.mes = mes;
-       // validando o dia de acordo com o mes
-       if (dia > 0 && dia <= diasmes[mes+1]){
-           this.dia = dia;
-       } else {
-           System.out.println("Dia inválido");
-           this.dia = 1;
-       } 
-    } else {
-       System.out.println("Mês inválido");
-       this.mes = 1;
-    }
-
-    if (ano > 0){
-        this.ano = ano;
-    } else {
-        System.out.println("Ano inválido");
-        this.ano = 1900;
-    }
+	if (ano > 0){
+		this.ano = ano;
+	} else {
+		System.out.println("Ano inválido");
+		this.ano = 1900;
+	}
 }
 ```
 
