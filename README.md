@@ -91,7 +91,7 @@ A segunda prática tem por objetivo exercitar os conceitos de Abstração, Encap
 
 4. Altere o método construtor da classe **Data** para que ele execute o método `setData` ao ser executado.
 
-5. Crie um método chamado **ehBissexto** do tipo `boolean` que retorna **true** se o ano for bissexto e depois altere o método `setData` para validar o dia inicializado do mês de fevereiro. O método não deve receber nenhum parametro (utilizar o valor gravado nos aributos da classe
+5. Crie um método chamado **ehBissexto** do tipo `boolean` que retorna **true** se o ano for bissexto e depois altere o método `setData` para validar o dia inicializado do mês de fevereiro. O método não deve receber nenhum parametro (utilizar o valor gravado nos aributos da classe).
 
-4. Crie um método **static** chamado somarDias na classe Data que recebe uma **Data** como parâmetro e o número de dias a somar e retorne uma nova data. A nova data deve considerar os anos bissextos. 
+4. Crie um método **static** chamado somarDias na classe Data que recebe uma **Data** como parâmetro e o número de dias a somar e **retorne** uma nova data ```return new Data(dd, mm, ano);```. A nova data deve considerar os anos bissextos. 
  
