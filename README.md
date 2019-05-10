@@ -2,7 +2,7 @@
 A prática tem por objetivo exercitar a programação orientada a objetos fixando os conteúdo de Abstração e Encapsulamento permitindo domínio da linguagem de programação.
 
 ## parte I
-1. Para começar, baixe o arquivo [Data.java](http://gpu.rocks/playground) que contém uma estrutura minimalista de uma classe para representar uma data qualquer em orientação a objetos.
+1. Para começar, baixe a classe [Data.java](http://gpu.rocks/playground) que contém uma estrutura minimalista de uma classe para representar uma data qualquer em orientação a objetos.
 
 2. Crie um novo arquivo chamado AppData.java dentro da pasta onde o arquivo anterior foi baixado. Este arquivo deve ter a estrutura padrão de uma aplicação Java e deve conter o método `public static void main(String args[])`.
 
