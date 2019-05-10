@@ -1,5 +1,5 @@
 # Prática de POO
-A prática tem por objetivo exercitar a programação orientada a objetos fixando os conteúdo de Abstração e Encapsulamento
+A prática tem por objetivo exercitar a programação orientada a objetos fixando os conteúdo de Abstração e Encapsulamento permitindo domínio da linguagem de programação.
 
 ## parte I
 1. Para começar, baixe o arquivo [Data.java](http://gpu.rocks/playground) que contém uma estrutura minimalista de uma classe para representar uma data qualquer em orientação a objetos.
@@ -15,8 +15,9 @@ A prática tem por objetivo exercitar a programação orientada a objetos fixand
  java AppData
 ```
 
-Irá ocorrer um erro de compilação pois o método construtor não está ajustado para receber todos os parâmetros passados na criação do objeto. Acrescente os atributos mes e ano do tipo int seguindo a estrutura existente na classe Data e ajuste o método construtor para receber os parâmetros mes e ano do tipo inteiro e inicializar os atributos da classe.
+Irá ocorrer um erro de compilação. O que gerou esse erro? 
 
+Corrija o método construtor para que ele receba os parâmetros passados na criação do objeto. Acrescente os atributos mes e ano do tipo int seguindo à estrutura existente na classe Data e ajuste o método construtor para ele inicialize os atributos da classe.
 
 Agora vamos exibir os atributos da data criada, para isso adicione o seguinte código dentro do método main em AppData.
 ```java
@@ -30,6 +31,8 @@ Recompile e execute novamente o arquivo AppData e veja que a saída será os val
 dataNascimento.dia = 40;
 ```
 6. Isso mudou o valor do atributo permitindo inserir um valor inválido para uma data. Vamos **encapsular** os atributos para impedir que eles sejam acessados diretamente. Para isso acrecente a palavra reservada `private` antes do tipo do dado nos atributos da classe `Data.java`. Recompile o código e veja os erros de saída `AppData.java:X: error: dia has private access in Data`. Isto indica que não podemos mais acessar diretamento o atributo pois ele foi encapsulado.
+
+Comente as linhas onde é feito o acesso direto aos atributos.
 
 7. Agora vamos criar um método chamado `setData` responsável validar e  atribuir os valores a data. Sempre utilizamos o método `set` para alterar o valor de qualquer atributo que esteja encapsulado.
 ```java
@@ -78,9 +81,17 @@ System.out.println( dataNascimento.getData() );
 
 
 ## Parte II - Implementação de uma classe
+A segunda prática tem por objetivo exercitar os conceitos de Abstração, Encapsulamento e utilizar o conceitos da linguagem Java além de fazer o reaproveitamento de código (um dos objetivos da OO).
+
 1. Implemente uma classe chamada Pessoa contendo os atributos `nome, cpf, sexo e dataNascimento`. O atributo dataNascimento deve ser do tipo `Data` (classe utilizada anteriormente).
 
 2. Codifique o método construtor para que ele inicialize todos os atributos da classe e também crie os métodos `get` e `set` para cada atributo da classe. 
 
-3. Codifique um método chamado apresentarPessoa() que escreve na tela todos os atributos da classe. Para exibir a data de nascimento, use o método `getData()` da classe Data.
+3. Codifique um método chamado apresentarPessoa() que escreve na tela todos os atributos da classe. Para exibir a data de nascimento, você deve usar método `getData()` da classe Data. 
+
+4. Altere o método construtor da classe **Data** para que ele execute o método `setData` ao ser executado.
+
+5. Crie um método chamado **ehBissexto** do tipo `boolean` que retorna **true** se o ano for bissexto e depois altere o método `setData` para validar o dia inicializado do mês de fevereiro. O método não deve receber nenhum parametro (utilizar o valor gravado nos aributos da classe
+
+4. Crie um método **static** chamado somarDias na classe Data que recebe uma **Data** como parâmetro e o número de dias a somar e retorne uma nova data. A nova data deve considerar os anos bissextos. 
  
