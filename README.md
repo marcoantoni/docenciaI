@@ -1,25 +1,18 @@
 # Prática de POO
-A prática tem por objetivo exercitar a programação orientada a objetos fixando os conteúdo de Abstração e Encapsulamento permitindo domínio da linguagem de programação.
+A prática tem por objetivo exercitar os conceitos de programação orientada a objetos fixando os conteúdo de Abstração e Encapsulamento permitindo domínio da linguagem de programação.
 
 ## parte I
-1. Para começar, baixe a classe [Data.java](https://github.com/marcoantoni/docenciaI/blob/master/Data.java) que contém uma estrutura minimalista de uma classe para representar uma data qualquer em orientação a objetos.
+1. Para começar, baixe a classe [Data.java](https://github.com/marcoantoni/docenciaI/blob/master/Data.java) que contém uma estrutura minimalista de uma classe para representar uma data usando orientação a objetos.
 
 2. Crie um novo arquivo chamado AppData.java dentro da pasta onde o arquivo anterior foi baixado. Este arquivo deve conter o método `public static void main(String args[])`.
 
 3. Dentro do método principal, crie um objeto chamado dataNascimento da classe Data passando como parâmetro 3 inteiros que represtam respectivamente o dia, mes e ano de uma determinada data.
 
-4. Compile e execute esse código. Se estiver no terminal é necessário usar os comandos abaixo:
-
-```bash
- javac AppData.java
- java AppData
-```
-
-Irá ocorrer um erro de compilação. O que gerou esse erro? 
+Tente compilar esse código. Qual foi o motivo deste erro? 
 
 Corrija o método construtor para que ele receba os parâmetros passados na criação do objeto. Acrescente os atributos mes e ano do tipo int seguindo à estrutura existente na classe Data e ajuste o método construtor para ele inicialize os atributos da classe.
 
-Agora vamos exibir os atributos da data criada, para isso adicione o seguinte código dentro do método main em AppData.
+4. Agora vamos exibir os atributos da data criada, para isso adicione o seguinte código dentro do método `main` em AppData.
 ```java
 System.out.println(dataNascimento.dia + "/" + dataNascimento.mes + "/" + dataNascimento.ano);
 ```
@@ -90,7 +83,7 @@ A segunda prática tem por objetivo exercitar os conceitos de Abstração, Encap
 
 4. Altere o método construtor da classe **Data** para que ele execute o método `setData` ao ser executado.
 
-5. Crie um método chamado **ehBissexto** do tipo `boolean` que retorna **true** se o ano for bissexto e depois altere o método `setData` para validar o dia inicializado do mês de fevereiro. O método não deve receber nenhum parametro (utilizar o valor gravado nos aributos da classe).
+5. Crie um método chamado **ehBissexto** do tipo `boolean` que retorna **true** se o ano for bissexto e depois altere o método `setData` para validar o dia inicializado do mês de fevereiro. O método não deve receber nenhum parâmetro (utilizar o valor gravado nos aributos da classe).
 
 4. Crie um método **static** chamado somarDias na classe Data que recebe uma **Data** como parâmetro e o número de dias a somar e **retorne** uma nova data ```return new Data(dd, mm, ano);```. A nova data deve considerar os anos bissextos. 
  
